@@ -1,15 +1,28 @@
-# Example Site settings
+# 사이트 설정
+title: '/home'
+description: "Seungtae's Homepage. Connected with Github Pages: https://kstash.github.io"
 
-#google_analytics: UA-NNNNNNNN-N
+# 헤더 페이지 설정
+header_pages:
+  - index.md
+  - projects.md
+  - tags.md
+  - contact.md
 
-#header_pages:
-#  - index.md
-#  - about.md
+# 푸터 설정
+footer: 'Contact me <a href="mailto:stash@seungtae.com">stash@seungtae.com</a>'
 
-#footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
-
-#style: light # dark (default) or light
-#listen_for_clients_preferred_style: true # true or false (default)
+# 스타일 설정
+style: dark # dark (기본값), light 또는 hacker
+listen_for_clients_preferred_style: true # true 또는 false (기본값)
 
 plugins:
   - jekyll-seo-tag
+
+# 컬렉션 설정
+collections:
+  tag:
+    output: true
+
+# 로컬 테스트에서는 테마 설정 제거
+# remote_theme: b2a3e8/jekyll-theme-console

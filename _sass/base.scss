@@ -16,6 +16,7 @@ $container-max-width:  600px !default;
  */
 body { background-color: var(--background-color);  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
 h1, h2, h3, h4, h5, h6 { font-size: $base-font-size;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: var(--text-color); }
+h1 { margin-bottom: 25px; margin-top: 0; }
 p, ul, ol { margin: 0px;  color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
@@ -24,7 +25,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 /**
  * Layout
  */
-.container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
+.container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; padding-left: 0; }
 p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 15px; }
 footer { color: var(--text-color);  border-top: var(--border);  margin: 20px auto 15px;  padding-top: 10px;  text-align: right; }
 header { margin-top: 25px;  margin-bottom: 10px; }
@@ -47,11 +48,17 @@ footer { margin-bottom: 20px; }
 /**
  * Header/Navigation
  */
-.menu { border-top: var(--border);  border-bottom: var(--border);  margin-bottom: 25px; }
-.menu ul { margin-top: 12px;  margin-bottom: 12px;  padding-left: 0px;  list-style-type: none;  text-align: right; }
+.menu { border-top: var(--border);  border-bottom: var(--border);  margin-bottom: 25px; display: flex; justify-content: space-between; }
+.menu.no-left-space { padding-left: 0; }
+.menu ul { margin-top: 12px;  margin-bottom: 12px;  padding-left: 0px;  list-style-type: none; }
 .menu ul li { display: inline;  margin-left: 10px; }
 .menu ul li a { text-decoration: none;  color: var(--text-color); }
 .menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--base-color); }
+.menu ul.menu-left { text-align: left; padding-left: 0; margin-left: 0; box-sizing: border-box; width: auto; }
+.menu ul.menu-left li { margin-left: 0; }
+.menu ul.menu-left li.no-left-margin { margin-left: 0; padding-left: 0; }
+.menu ul.menu-left li.no-left-margin a { padding-left: 0; margin-left: 0; }
+.menu ul.menu-right { text-align: right; }
 
 /**
  * Form
@@ -131,3 +138,29 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .highlight .vg { color: var(--code-color-7); } /* Name.Variable.Global */
 .highlight .vi { color: var(--code-color-7); } /* Name.Variable.Instance */
 .highlight .il { color: var(--code-color-14); } /* Literal.Number.Integer.Long */
+
+/**
+ * Posts
+ */
+.post-meta {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+.post-date {
+  font-size: 0.8em;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.post-tags {
+  line-height: 1.3;
+}
+
+.post-tags a {
+  text-decoration: none;
+  font-size: 0.9em;
+}
