@@ -41,9 +41,30 @@ footer { margin-bottom: 20px; }
 /**
  * Lists
  */
-:not(.menu) > ul { list-style: none;  padding-left: 0; }
+:not(.menu) > ul { list-style: none; padding-left: 0; }
 :not(.menu) > ul { list-style-type: none; }
-:not(.menu) > ul > li:before { content: "-";  margin-right: 9px; }
+:not(.menu) > ul > li:before { content: "-"; margin-right: 9px; }
+
+/* 중첩 리스트 스타일링 추가 */
+:not(.menu) > ul > li > ul { 
+  list-style: none; 
+  padding-left: 20px; 
+  margin-top: 5px;
+}
+:not(.menu) > ul > li > ul > li:before { 
+  content: "-"; 
+  margin-right: 9px; 
+}
+/* 3단계 중첩 리스트 */
+:not(.menu) > ul > li > ul > li > ul { 
+  list-style: none; 
+  padding-left: 20px; 
+  margin-top: 5px;
+}
+:not(.menu) > ul > li > ul > li > ul > li:before { 
+  content: "-"; 
+  margin-right: 9px; 
+}
 
 /**
  * Header/Navigation

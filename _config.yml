@@ -1,6 +1,7 @@
 # 사이트 설정
 title: '/home'
-description: "Seungtae's Homepage. Connected with Github Pages: https://kstash.github.io"
+description: "Seungtae's CV Homepage. Connected with Github Pages: https://kstash.github.io"
+timezone: Asia/Seoul
 
 # 헤더 페이지 설정
 header_pages:
@@ -23,6 +24,7 @@ plugins:
 collections:
   tag:
     output: true
+
 
 # 로컬 테스트에서는 테마 설정 제거
 # remote_theme: b2a3e8/jekyll-theme-console

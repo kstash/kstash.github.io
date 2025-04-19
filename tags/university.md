@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: university
+title: University
 tag: university
 permalink: /tags/university/
 ---
